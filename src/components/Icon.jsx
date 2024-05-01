@@ -1,13 +1,13 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 
-const Icon = () => {
+const Icon = ({label}) => {
   return (
     <TouchableOpacity style={styles.tabel}>
       <View style={styles.kotak}>
         <Text style={styles.txt}>Icon</Text>
       </View>
-      <Text style={styles.txt}>LABEL</Text>
+      <Text style={styles.txt}>{label}</Text>
     </TouchableOpacity>
   );
 };
@@ -22,5 +22,13 @@ const styles = StyleSheet.create({
     width: 84,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  kotak: {
+    borderWidth: 3,
+    width: 72,
+    height: 72,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 15,
   },
 });
