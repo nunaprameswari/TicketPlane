@@ -13,14 +13,16 @@ const Tabs = createBottomTabNavigator();
 
 const MenuTab = () => {
   return (
-    <Tabs.Navigator screenOptions={{tabBarActiveTintColor: 'green'}}>
+    <Tabs.Navigator
+      screenOptions={{tabBarActiveTintColor: 'green'}}
+      style={styles.icon}>
       <Tabs.Screen
         name="Beranda"
         component={Beranda}
         options={{
           headerShown: false,
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="browse" size={size} color={color} />
+            <MaterialCommunityIcons name="home" size={size} color={color} />
           ),
         }}
       />
@@ -40,7 +42,7 @@ const MenuTab = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="browse" size={size} color={color} />
+            <MaterialCommunityIcons name="account" size={size} color={color} />
           ),
         }}
       />
@@ -64,4 +66,8 @@ function App() {
 
 export default App;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  icon: {
+    backgroundColor: 'black',
+  },
+});
