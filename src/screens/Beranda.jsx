@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Icon from '../components/Icon';
 
@@ -10,13 +10,15 @@ const Data = [
   {id: 5, label: 'Top Up'},
 ];
 
-const Beranda = () => {
-  return (
-    <View>
-      <Text>Beranda</Text>
-    </View>
-  );
-};
+const Beranda = () => (
+  <View>
+    <FlatList
+      data={Data}
+      renderItem={({item}) => <Icon label={item.label} />}
+      horizontal={true}
+    />
+  </View>
+);
 
 export default Beranda;
 
