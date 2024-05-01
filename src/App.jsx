@@ -11,6 +11,23 @@ import Akun from './screens/Akun';
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 
+const MenuTab = () => {
+  return (
+    <Tabs.Navigator>
+      <Tabs.Screen
+        name="Beranda"
+        component={Beranda}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({size, color}) => (
+            <MaterialCommunityIcons name="home" size={40} color={'blue'} />
+          ),
+        }}
+      />
+    </Tabs.Navigator>
+  );
+};
+
 function App() {
   return (
     <NavigationContainer>
