@@ -1,11 +1,18 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Akun = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.login}>TicketPlane</Text>
-      <Text style={styles.text}>Login sebelum Pesan Tiket Pesawatmu!</Text>
+    <View>
+      <View style={styles.container}>
+        <Text style={styles.login}>TicketPlane</Text>
+        <Text style={styles.text}>Login sebelum Pesan Tiket Pesawatmu!</Text>
+      </View>
+      <View>
+        <MaterialCommunityIcons name="home" size={30} color={'black'} />
+        <Text style={styles.text}>Username</Text>
+      </View>
     </View>
   );
 };
