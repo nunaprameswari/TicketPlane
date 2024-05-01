@@ -13,14 +13,34 @@ const Tabs = createBottomTabNavigator();
 
 const MenuTab = () => {
   return (
-    <Tabs.Navigator>
+    <Tabs.Navigator screenOptions={{tabBarActiveTintColor: 'green'}}>
       <Tabs.Screen
         name="Beranda"
         component={Beranda}
         options={{
           headerShown: false,
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="home" size={40} color={'blue'} />
+            <MaterialCommunityIcons name="browse" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Tiket"
+        component={Tiket}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({size, color}) => (
+            <MaterialCommunityIcons name="home" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Akun"
+        component={Akun}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({size, color}) => (
+            <MaterialCommunityIcons name="browse" size={size} color={color} />
           ),
         }}
       />
