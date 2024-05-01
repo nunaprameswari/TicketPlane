@@ -30,7 +30,7 @@ const MenuTab = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="home" size={size} color={color} />
+            <MaterialCommunityIcons name="cog" size={size} color={color} />
           ),
         }}
       />
