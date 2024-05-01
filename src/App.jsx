@@ -8,13 +8,22 @@ import Beranda from './screens/Beranda';
 import Tiket from './screens/Tiket';
 import Akun from './screens/Akun';
 
-const App = () => {
+const Stack = createNativeStackNavigator();
+const Tabs = createBottomTabNavigator();
+
+function App() {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Tab"
+          component={MenuTab}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-};
+}
 
 export default App;
 
