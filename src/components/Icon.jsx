@@ -14,4 +14,13 @@ const Icon = () => {
 
 export default Icon;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  tabel: {
+    borderWidth: 1,
+    margin: 5,
+    padding: 5,
+    width: 84,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
