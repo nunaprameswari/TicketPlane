@@ -22,7 +22,7 @@ const MenuTab = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="home" size={size} color={color} />
+            <MaterialCommunityIcons name="grid" size={size} color={color} />
           ),
         }}
       />
@@ -32,7 +32,7 @@ const MenuTab = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="cog" size={size} color={color} />
+            <MaterialCommunityIcons name="category" size={size} color={color} />
           ),
         }}
       />

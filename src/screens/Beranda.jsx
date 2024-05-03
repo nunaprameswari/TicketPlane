@@ -1,5 +1,6 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from '../components/Icon';
 
 const Data = [
@@ -12,6 +13,9 @@ const Data = [
 
 const Beranda = () => (
   <View>
+    <TouchableOpacity>
+      <MaterialCommunityIcons name="search" size={26} />
+    </TouchableOpacity>
     <FlatList
       data={Data}
       renderItem={({item}) => <Icon label={item.label} />}
