@@ -13,10 +13,10 @@ const Data = [
 
 const Beranda = () => (
   <View>
-    <Text style={styles.text}>Hello User!</Text>
-    <TouchableOpacity style={styles.search}>
-      <MaterialCommunityIcons name="pencaharian" size={26} />
-    </TouchableOpacity>
+    <Text style={styles.text}>
+      Ticket Plane! {'                                          '}
+      <MaterialCommunityIcons name="emoticon" size={20} color={'black'} />
+    </Text>
     <FlatList
       data={Data}
       renderItem={({item}) => <Icon label={item.label} />}
@@ -33,12 +33,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 5,
     fontSize: 23,
-  },
-  search: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
