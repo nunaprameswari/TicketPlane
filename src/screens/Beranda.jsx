@@ -13,8 +13,9 @@ const Data = [
 
 const Beranda = () => (
   <View>
-    <TouchableOpacity>
-      <MaterialCommunityIcons name="search" size={26} />
+    <Text style={styles.text}>Hello User!</Text>
+    <TouchableOpacity style={styles.search}>
+      <MaterialCommunityIcons name="pencaharian" size={26} />
     </TouchableOpacity>
     <FlatList
       data={Data}
@@ -26,4 +27,18 @@ const Beranda = () => (
 
 export default Beranda;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  text: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 5,
+    fontSize: 23,
+  },
+  search: {
+    width: 40,
+    height: 40,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

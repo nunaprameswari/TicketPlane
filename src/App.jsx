@@ -7,6 +7,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Beranda from './screens/Beranda';
 import Tiket from './screens/Tiket';
 import Akun from './screens/Akun';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -14,16 +15,26 @@ const Tabs = createBottomTabNavigator();
 const MenuTab = () => {
   return (
     <Tabs.Navigator
-      screenOptions={{tabBarActiveTintColor: 'green'}}
-      style={styles.icon}>
+      screenOptions={{
+        tabBarActiveTintColor: 'pink',
+        tabBarHideOnKeyboard: true,
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: 'blue',
+        },
+      }}>
       <Tabs.Screen
         name="Beranda"
         component={Beranda}
         options={{
           headerShown: false,
-          tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="grid" size={size} color={color} />
-          ),
+          tabBarIcon: ({size, color}) => {
+            return (
+              <View style={styles.background}>
+                <MaterialCommunityIcons name="grid" size={size} color={color} />
+              </View>
+            );
+          },
         }}
       />
       <Tabs.Screen
@@ -32,7 +43,7 @@ const MenuTab = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="category" size={size} color={color} />
+            <MaterialCommunityIcons name="ticket" size={size} color={color} />
           ),
         }}
       />
@@ -67,7 +78,7 @@ function App() {
 export default App;
 
 const styles = StyleSheet.create({
-  icon: {
-    backgroundColor: 'black',
+  background: {
+    backgroundColor: '',
   },
 });
