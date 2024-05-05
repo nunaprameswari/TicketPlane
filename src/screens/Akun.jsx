@@ -9,7 +9,7 @@ const Akun = () => {
         <Text style={styles.login}>TicketPlane</Text>
         <Text style={styles.text}>Login sebelum Pesan Tiket Pesawatmu!</Text>
       </View>
-      <View>
+      <View style={styles.box}>
         <MaterialCommunityIcons name="home" size={30} color={'black'} />
         <Text style={styles.text}>Username</Text>
       </View>
@@ -31,5 +31,12 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     fontSize: 17,
+  },
+  box: {
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    marginHorizontal: 40,
+    borderRadius: 20,
+    marginVertical: 30,
   },
 });
