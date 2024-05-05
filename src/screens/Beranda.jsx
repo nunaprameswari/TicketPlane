@@ -25,7 +25,7 @@ const Beranda = navigation => (
     <TouchableOpacity
       onPress={() => navigation.navigate('Pofile')}
       style={styles.bottom}>
-      <Text>Profile</Text>
+      <Text style={styles.txt}>Profile</Text>
     </TouchableOpacity>
   </View>
 );
@@ -40,10 +40,15 @@ const styles = StyleSheet.create({
     fontSize: 23,
   },
   bottom: {
-    borderWidth: 3,
+    borderWidth: 5,
     margin: 20,
     padding: 12,
     borderRadius: 40,
     alignItems: 'center',
+    backgroundColor: 'blue',
+  },
+  txt: {
+    fontSize: 32,
+    color: 'white',
   },
 });
