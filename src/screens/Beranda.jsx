@@ -1,13 +1,14 @@
 import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Icon from '../components/Icon';
+import Tombol from '../components/Tombol';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Data = [
-  {id: 1, label: 'Top Up'},
-  {id: 2, label: 'Top Up'},
-  {id: 3, label: 'Top Up'},
-  {id: 4, label: 'Top Up'},
+  {id: 1, label: 'Pembayaran'},
+  {id: 2, label: 'Kalender'},
+  {id: 3, label: 'Schedule'},
+  {id: 4, label: 'Ticket'},
   {id: 5, label: 'Top Up'},
 ];
 
@@ -16,17 +17,17 @@ const Beranda = ({navigation}) => {
     <View>
       <Text style={styles.text}>
         Ticket Plane! {'                                          '}
-        <MaterialCommunityIcons name="emoticon" size={20} color={'black'} />
+        <Icon name="search" size={20} color={'black'} />
       </Text>
       <FlatList
         data={Data}
-        renderItem={({item}) => <Icon label={item.label} />}
+        renderItem={({item}) => <Tombol label={item.label} />}
         horizontal={true}
       />
       <TouchableOpacity
         onPress={() => navigation.navigate('Akun')}
         style={styles.bottom}>
-        <Text style={styles.txt}>Profile</Text>
+        <Text style={styles.txt}>Account</Text>
       </TouchableOpacity>
     </View>
   );

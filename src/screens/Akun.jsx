@@ -8,39 +8,36 @@ import {
 import React from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Akun = ({label, onPress}) => {
+const Akun = () => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.kotak}>
-      <Text>{label}</Text>
-      <View>
-        <View style={styles.container}>
-          <Text style={styles.login}>TicketPlane</Text>
-          <Text style={styles.text}>Login sebelum Pesan Tiket Pesawatmu!</Text>
-        </View>
-        <View style={styles.box}>
-          <MaterialCommunityIcons
-            name="account"
-            size={30}
-            color={'black'}
-            style={styles.icon}
-          />
-          <TextInput style={styles.input} placeholder="Username" />
-        </View>
-        <View style={styles.box}>
-          <MaterialCommunityIcons
-            name="lock"
-            size={30}
-            color={'black'}
-            style={styles.icon}
-          />
-          <TextInput
-            style={styles.input}
-            placeholder="Password"
-            secureTextEntry
-          />
-        </View>
+    <View>
+      <View style={styles.container}>
+        <Text style={styles.login}>TicketPlane</Text>
+        <Text style={styles.text}>Login sebelum Pesan Tiket Pesawatmu!</Text>
       </View>
-    </TouchableOpacity>
+      <View style={styles.box}>
+        <MaterialCommunityIcons
+          name="account"
+          size={30}
+          color={'black'}
+          style={styles.icon}
+        />
+        <TextInput style={styles.input} placeholder="Username" />
+      </View>
+      <View style={styles.box}>
+        <MaterialCommunityIcons
+          name="lock"
+          size={30}
+          color={'black'}
+          style={styles.icon}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Password"
+          secureTextEntry
+        />
+      </View>
+    </View>
   );
 };
 

@@ -4,11 +4,15 @@ import React from 'react';
 const Tiket = () => {
   return (
     <View>
-      <Text>Tiket</Text>
+      <Text style={styles.text}>Masih Butuh Refrensi</Text>
     </View>
   );
 };
 
 export default Tiket;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 24,
+  },
+});
