@@ -11,12 +11,21 @@ const Akun = () => {
       </View>
       <View style={styles.box}>
         <MaterialCommunityIcons
-          name="home"
+          name="account"
           size={30}
           color={'black'}
           style={styles.icon}
         />
-        <TextInput style={styles.input}></TextInput>
+        <TextInput style={styles.input} placeholder='Username'></TextInput>
+      </View>
+      <View style={styles.box}>
+        <MaterialCommunityIcons
+          name="lock"
+          size={30}
+          color={'black'}
+          style={styles.icon}
+        />
+        <TextInput style={styles.input} placeholder='Password' secureTextEntry></TextInput>
       </View>
     </View>
   );
