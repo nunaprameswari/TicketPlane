@@ -39,4 +39,11 @@ const styles = StyleSheet.create({
     padding: 5,
     fontSize: 23,
   },
+  bottom: {
+    borderWidth: 3,
+    margin: 20,
+    padding: 12,
+    borderRadius: 40,
+    alignItems: 'center',
+  },
 });
