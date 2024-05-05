@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
 import React from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -10,8 +10,13 @@ const Akun = () => {
         <Text style={styles.text}>Login sebelum Pesan Tiket Pesawatmu!</Text>
       </View>
       <View style={styles.box}>
-        <MaterialCommunityIcons name="home" size={30} color={'black'} />
-        <Text style={styles.text}>Username</Text>
+        <MaterialCommunityIcons
+          name="home"
+          size={30}
+          color={'black'}
+          style={styles.icon}
+        />
+        <TextInput style={styles.input}></TextInput>
       </View>
     </View>
   );
@@ -35,8 +40,19 @@ const styles = StyleSheet.create({
   box: {
     backgroundColor: 'white',
     flexDirection: 'row',
-    marginHorizontal: 40,
+    marginHorizontal: 30,
+    height: 50,
     borderRadius: 20,
     marginVertical: 30,
+    elevation: 15,
+    alignItems: 'center',
+  },
+  icon: {
+    marginLeft: 15,
+  },
+  input: {
+    flex: 1,
+    fontSize: 18,
+    fontStyle: 'italic',
   },
 });
