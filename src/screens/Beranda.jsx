@@ -11,7 +11,7 @@ const Data = [
   {id: 5, label: 'Top Up'},
 ];
 
-const Beranda = () => (
+const Beranda = navigation => (
   <View>
     <Text style={styles.text}>
       Ticket Plane! {'                                          '}
@@ -22,6 +22,11 @@ const Beranda = () => (
       renderItem={({item}) => <Icon label={item.label} />}
       horizontal={true}
     />
+    <TouchableOpacity
+      onPress={() => navigation.navigate('Pofile')}
+      style={styles.bottom}>
+      <Text>Profile</Text>
+    </TouchableOpacity>
   </View>
 );
 
