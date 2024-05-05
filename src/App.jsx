@@ -12,52 +12,65 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 
+const Data = [{id: 1, label: 'Login'}];
+
 const MenuTab = () => {
   return (
-    <Tabs.Navigator
-      screenOptions={{
-        tabBarActiveTintColor: 'white',
-        tabBarHideOnKeyboard: true,
-        headerShown: false,
-        tabBarStyle: {
-          backgroundColor: 'blue',
-        },
-      }}>
-      <Tabs.Screen
-        name="Beranda"
-        component={Beranda}
-        options={{
+    <View>
+      <Akun label={'Login'} style={styles.kotak} />
+      <Tabs.Navigator
+        screenOptions={{
+          tabBarActiveTintColor: 'white',
+          tabBarHideOnKeyboard: true,
           headerShown: false,
-          tabBarIcon: ({size, color}) => {
-            return (
-              <View style={styles.background}>
-                <MaterialCommunityIcons name="grid" size={size} color={color} />
-              </View>
-            );
+          tabBarStyle: {
+            backgroundColor: 'blue',
           },
-        }}
-      />
-      <Tabs.Screen
-        name="Tiket"
-        component={Tiket}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="ticket" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="Akun"
-        component={Akun}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="account" size={size} color={color} />
-          ),
-        }}
-      />
-    </Tabs.Navigator>
+        }}>
+        <Tabs.Screen
+          name="Beranda"
+          component={Beranda}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({size, color}) => {
+              return (
+                <View style={styles.background}>
+                  <MaterialCommunityIcons
+                    name="grid"
+                    size={size}
+                    color={color}
+                  />
+                </View>
+              );
+            },
+          }}
+        />
+        <Tabs.Screen
+          name="Tiket"
+          component={Tiket}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({size, color}) => (
+              <MaterialCommunityIcons name="ticket" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="Akun"
+          component={Akun}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({size, color}) => (
+              <MaterialCommunityIcons
+                name="account"
+                size={size}
+                color={color}
+              />
+            ),
+          }}
+        />
+      </Tabs.Navigator>
+    </View>
   );
 };
 
@@ -80,5 +93,8 @@ export default App;
 const styles = StyleSheet.create({
   background: {
     backgroundColor: '',
+  },
+  kotak: {
+    
   },
 });
