@@ -16,7 +16,7 @@ const MenuTab = () => {
   return (
     <Tabs.Navigator
       screenOptions={{
-        tabBarActiveTintColor: 'pink',
+        tabBarActiveTintColor: 'white',
         tabBarHideOnKeyboard: true,
         headerShown: false,
         tabBarStyle: {

@@ -11,24 +11,26 @@ const Data = [
   {id: 5, label: 'Top Up'},
 ];
 
-const Beranda = navigation => (
-  <View>
-    <Text style={styles.text}>
-      Ticket Plane! {'                                          '}
-      <MaterialCommunityIcons name="emoticon" size={20} color={'black'} />
-    </Text>
-    <FlatList
-      data={Data}
-      renderItem={({item}) => <Icon label={item.label} />}
-      horizontal={true}
-    />
-    <TouchableOpacity
-      onPress={() => navigation.navigate('Pofile')}
-      style={styles.bottom}>
-      <Text style={styles.txt}>Profile</Text>
-    </TouchableOpacity>
-  </View>
-);
+const Beranda = ({navigation}) => {
+  return (
+    <View>
+      <Text style={styles.text}>
+        Ticket Plane! {'                                          '}
+        <MaterialCommunityIcons name="emoticon" size={20} color={'black'} />
+      </Text>
+      <FlatList
+        data={Data}
+        renderItem={({item}) => <Icon label={item.label} />}
+        horizontal={true}
+      />
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Akun')}
+        style={styles.bottom}>
+        <Text style={styles.txt}>Profile</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
 export default Beranda;
 
